@@ -30,14 +30,19 @@ coding sequence looks viral or host in origin, together with sequences that have
 synonymously. A synonymous rewrite changes the codons but not the protein they encode, so every
 rewritten point in the plot has the same amino acid sequence as the parent it came from.
 
-2114 points across four scenes:
+2173 points across six scenes:
 
 | scene | what it shows |
 |---|---|
 | The decision frame | every sequence on three measured axes at once |
-| Frozen, then hardened | the same sequences scored by two checkpoints, threaded between slabs |
 | Five ways to write the same protein | where each rewrite family lands relative to the boundary |
 | The walk across the boundary | one rewrite applied in eighths, as a path |
+| Delete a direction, see what breaks | one mark per feature, not per sequence: accuracy after erasing that feature's subspace, against a matched random subspace |
+| Does the geometry survive a different encoder? | one mark per layer: similarity to the best matching layer of a second encoder family |
+| Frozen, then hardened | the same sequences under two checkpoints, animated between them |
+
+The last three scenes are worth reading carefully. In the two middle ones a mark is a feature
+or a layer rather than a sequence, so n is the number of things probed, not a sample size.
 
 Recurring axes:
 
@@ -45,8 +50,8 @@ Recurring axes:
   centroid and 1 the host centroid.
 - **P(viral)** is the classifier's own output, with the decision boundary at 0.5.
 - **depth** differs per scene: sometimes a measured direction, sometimes a categorical slot.
-  Each scene's footnotes say which, and one of them says outright that its depth is a family
-  label rather than a measured direction.
+  Each scene's footnotes say which, and one says outright that its depth is a family label
+  rather than a measured direction.
 
 Points are precomputed, not live inference. Frames are never merged: each scene keeps the axes
 it was computed in, so coordinates are comparable within a scene and not across scenes. The
