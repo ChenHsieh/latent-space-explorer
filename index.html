@@ -40,6 +40,10 @@
   .top h1{font-size:24px;font-weight:800;letter-spacing:-.015em}
   .top .sub{font-family:"IBM Plex Mono",monospace;font-size:13px;letter-spacing:.06em;
             text-transform:uppercase;color:var(--ink-3);line-height:1.45}
+  .lab-link{display:inline-flex;align-items:center;align-self:flex-start;min-height:var(--tap);
+            padding:0 10px;color:var(--ink-2);font:500 14px/1 "IBM Plex Sans",sans-serif;
+            text-decoration:none}
+  .lab-link:hover{color:var(--ink)}
 
   /* the scene bar is the main navigation, so it stays reachable while you scroll */
   .scenes{position:sticky;top:0;z-index:20;display:flex;gap:8px;background:var(--panel);
@@ -169,6 +173,7 @@
     :root{--pad:20px}
     .top{flex-direction:row;align-items:baseline;gap:18px;padding-bottom:14px}
     .top h1{font-size:25px}
+    .lab-link{margin-left:auto}
     .scenes{padding-bottom:14px}
     #plot{height:60vh;max-height:640px}
     .rail{display:grid;grid-template-columns:1fr 1fr;gap:18px 26px;
@@ -197,6 +202,7 @@
   <header class="top">
     <h1>Codon Latent Space Tour</h1>
     <span class="sub">Example dataset &middot; codon-sequence classifier, viral / host origin</span>
+    <a class="lab-link" href="https://chenhsieh.github.io/play-lab/">Play Lab</a>
   </header>
   <nav class="scenes" id="tabs" aria-label="Scenes"></nav>
 
